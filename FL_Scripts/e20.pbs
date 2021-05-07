@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N DFL_script
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=2gb
+#PBS -l walltime=07:59:00
+#PBS -j oe
+#PBS -o 0128_DFL_testrun_output_file_embersE20.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 split_E20_ifyouhavetime.py
+
+#END OF SCRIPT
