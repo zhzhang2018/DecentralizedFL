@@ -2,7 +2,11 @@ This repo documents the files used in running federated-learning-related experim
 
 Folder contents: 
 
-./data: Folder that stores the MNIST and CIFAR datasets
+./data: Folder that stores the MNIST and CIFAR datasets. Depending on the code, you probably also need to have this data folder within the root folder (one step above this repo) as well: 
+* ./data
+  * ./MNIST
+  * ./cifar-...
+* ./DecentralizedFL
 
 ./FL_Scripts: Auxiliary scripts developed in 2021/01-02 and seldom used anymore.
 
