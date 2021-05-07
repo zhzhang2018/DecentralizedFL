@@ -1,0 +1,20 @@
+---------------------------------------
+Begin PBS Prologue Mon Feb 15 15:41:48 EST 2021
+Job ID:     830043.sched-torque.pace.gatech.edu
+User ID:    zzhang433
+Job name:   pbsDiverseSGD_Ec1SameInit.pbs
+Queue:      embers
+End PBS Prologue Mon Feb 15 15:41:48 EST 2021
+---------------------------------------
+---------------------------------------
+Begin PBS Epilogue Mon Feb 15 15:41:49 EST 2021
+Job ID:     830043.sched-torque.pace.gatech.edu
+User ID:    zzhang433
+Job name:   pbsDiverseSGD_Ec1SameInit.pbs
+Resources:  walltime=01:00:00
+Rsrc Used:  cput=00:00:00,vmem=0kb,walltime=00:00:00,mem=0kb,energy_used=0
+Queue:      embers
+Nodes:     
+atl1-1-02-010-20-r.pace.gatech.edu
+End PBS Epilogue Mon Feb 15 15:41:49 EST 2021
+---------------------------------------

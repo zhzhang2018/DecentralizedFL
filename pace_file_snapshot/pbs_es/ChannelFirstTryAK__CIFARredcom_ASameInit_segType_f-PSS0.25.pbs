@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N redcom_-PSS0.25A
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:45:00
+#PBS -j oe
+#PBS -o redcommunCIFAR_ChannelFirstTryAK_A-k4-AdjAK-nr50-S-K20-EE1-SM_segType_ff-PSS-PSS0.25.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 CIFAR_DFL_reducedSharing.py ChannelFirstTryAK_ A -k 4 -Adj AK -nr 50 -S -K 20 -EE 1 -SM f  -PSS 0.25
+
+#END OF SCRIPT

@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N redcom_-PSS0.25B1
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:45:00
+#PBS -j oe
+#PBS -o redcommunMNIST_srn_FirstTest_MNIST_cuCRS_B1-k4-AdjAK-nr200-S-K20-SM_segType_cucu-SRN-CRS-PSS-PSS0.25.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_reducedSharing.py srn_FirstTest_MNIST_cuCRS_ B1 -k 4 -Adj AK -nr 200 -S -K 20 -SM cu -SRN -CRS  -PSS 0.25
+
+#END OF SCRIPT

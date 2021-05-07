@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N Timing_red0401_-PSS1.0B1
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:45:00
+#PBS -j oe
+#PBS -o redcommunMNIST_tryMNIST_segdist_lSW_B1-k4-AdjSW-nr50-S-K20-SM-D_segType_cu-TimingTest.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_reducedDebug0401.py TimeMNIST_segdist_cuSW_ B1 -k 4 -Adj SW -nr 5 -S -K 20 -SM cu -D -PSS 0.5
+
+#END OF SCRIPT

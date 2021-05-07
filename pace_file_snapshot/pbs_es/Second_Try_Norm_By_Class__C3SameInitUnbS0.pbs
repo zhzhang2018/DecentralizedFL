@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N DFL_divnorm_2_C3SameInitUnb
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=2gb
+#PBS -l walltime=06:55:00
+#PBS -j oe
+#PBS -o divnorm_2_Second_Try_Norm_By_Class_C3SameInitUnbS0.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_diverseUnbNorm.py Second_Try_Norm_By_Class_ C3 -S -s 0
+
+#END OF SCRIPT

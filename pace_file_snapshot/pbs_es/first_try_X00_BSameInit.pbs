@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N DFL_X{}_00BSameInit
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=1gb
+#PBS -l walltime=07:59:00
+#PBS -j oe
+#PBS -o divLoss_X00_BSameInit.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_diverseSGD_diverseLoss.py loss_first_try X00B -S
+
+#END OF SCRIPT

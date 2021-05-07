@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N commun_-K100B1
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=2gb
+#PBS -l walltime=06:59:00
+#PBS -j oe
+#PBS -o commun_B1-k4-s0.05-S-AET1-K-K100.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_extremeCommun.py firstTry_varK_ B1 -k 4 -s 0.05 -S -AET 1  -K 100
+
+#END OF SCRIPT

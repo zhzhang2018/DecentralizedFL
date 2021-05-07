@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N redcom_-PSS1.0A
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:45:00
+#PBS -j oe
+#PBS -o redcommunCIFAR_Channel_Undirected_SWk8_A-k8-AdjSW-nr200-S-K20-EE1-SM_segType_cucu-PSS-PSS1.0.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 CIFAR_DFL_reducedSharing.py Channel_Undirected_SWk8_ A -k 8 -Adj SW -nr 200 -S -K 20 -EE 1 -SM cu  -PSS 1.0
+
+#END OF SCRIPT

@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N DFL_overlap_k30
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=05:59:00
+#PBS -j oe
+#PBS -o overlap_0205k30.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_overlapData.py 0205k30
+
+#END OF SCRIPT
+
+
+
+
+
+
+

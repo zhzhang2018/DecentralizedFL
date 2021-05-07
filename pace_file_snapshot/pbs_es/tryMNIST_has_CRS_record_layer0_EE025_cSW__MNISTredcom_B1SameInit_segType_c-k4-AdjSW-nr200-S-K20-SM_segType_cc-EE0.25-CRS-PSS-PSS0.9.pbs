@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N redcom_-PSS0.9B1
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:45:00
+#PBS -j oe
+#PBS -o redcommunMNIST_tryMNIST_has_CRS_record_layer0_EE025_cSW_B1-k4-AdjSW-nr200-S-K20-SM_segType_cc-EE0.25-CRS-PSS-PSS0.9.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 MNIST_DFL_reducedSharing.py tryMNIST_has_CRS_record_layer0_EE025_cSW_ B1 -k 4 -Adj SW -nr 200 -S -K 20 -SM c -EE 0.25 -CRS  -PSS 0.9
+
+#END OF SCRIPT

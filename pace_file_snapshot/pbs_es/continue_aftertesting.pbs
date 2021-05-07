@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N aftermath_analysis
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:59:00
+#PBS -j oe
+#PBS -o test_preds.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 continue_individual_training.py 0208k10E10nonunistart MNIST_DFL_full_dataset_K10_C1_E10_
+
+#END OF SCRIPT
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N DFL_divSGD_E1SameInit
+#PBS -A GT-cabdallah3
+#PBS -l nodes=1:ppn=16
+#PBS -l pmem=2gb
+#PBS -l walltime=07:29:00
+#PBS -j oe
+#PBS -o divSGD_CIFAR_E1SameInitS4.out
+#PBS -m abe
+#PBS -M zzhang433@gatech.edu
+
+cd $PBS_O_WORKDIR
+module load pytorch
+python3 CIFAR_DFL_diverseSGD.py divSGD_CIFAR_ E1 -S -s 4
+
+#END OF SCRIPT
