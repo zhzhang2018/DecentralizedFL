@@ -12,6 +12,7 @@ Folder contents:
 
 ./npy_datas: Folder where recorded data from PACE would be copied to. Should not be visible.
 
+./pace_file_snapshop: Folder where the files in PACE were stored. It serves as a reference to what PACE files would look like.
 
 Individual files:
 
