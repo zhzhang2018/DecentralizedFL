@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# data files
+data/
+npy_datas/
+*.npz
+Testpickle
